@@ -1,0 +1,8 @@
+#line 1 "C:\\Users\\isaac\\bat-robot\\.vscode\\arduino.json"
+{
+    "sketch": "bat-robot.ino",
+    "output": "build",
+    "board": "arduino:mbed_nano:nano33ble",
+    "port": "COM3",
+    "programmer": "cmsis-dap"
+}

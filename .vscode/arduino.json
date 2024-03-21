@@ -1,0 +1,7 @@
+{
+    "sketch": "bat-robot.ino",
+    "output": "build",
+    "board": "arduino:mbed_nano:nano33ble",
+    "port": "COM3",
+    "programmer": "cmsis-dap"
+}
