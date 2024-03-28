@@ -2,8 +2,10 @@
 
 // This motor opens a door in a peek-a-boo toy.
 int waittime;
-int motorPin1 = 2; // 
-int motorPin2 = 3;
+int motorPin1 = 2; // digital pin
+int motorPin2 = 3; // digital pin
+int flapMotorEnablePin = 6; // analog pin
+//L293D flapMotor(motorPin1, motorPin2, 
 
 void setup()
 {
@@ -17,23 +19,11 @@ void loop()
   digitalWrite(motorPin1, HIGH);
   digitalWrite(motorPin2, LOW);
   digitalWrite(LED_BUILTIN, HIGH);
-  delay(100);
+  delay(2500);
   
   // pause
   digitalWrite(motorPin1, LOW);
   digitalWrite(motorPin2, LOW);
   digitalWrite(LED_BUILTIN, LOW);
-  delay(900);
-  
-  // go backward
-  digitalWrite(motorPin1, LOW);
-  digitalWrite(motorPin2, HIGH);
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(100);
-  
-  // pause
-  digitalWrite(motorPin1, LOW);
-  digitalWrite(motorPin2, LOW);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1900);
+  delay(1500);
 }
