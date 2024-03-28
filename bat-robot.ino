@@ -13,13 +13,25 @@ void setup()
 
 void loop()
 {
-  // go forward for 0.5 seconds
+  // go forward
   digitalWrite(motorPin1, HIGH);
   digitalWrite(motorPin2, LOW);
   digitalWrite(LED_BUILTIN, HIGH);
   delay(100);
   
-  // pause for 0.5 seconds to allow motor to stop
+  // pause
+  digitalWrite(motorPin1, LOW);
+  digitalWrite(motorPin2, LOW);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(900);
+  
+  // go backward
+  digitalWrite(motorPin1, LOW);
+  digitalWrite(motorPin2, HIGH);
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(100);
+  
+  // pause
   digitalWrite(motorPin1, LOW);
   digitalWrite(motorPin2, LOW);
   digitalWrite(LED_BUILTIN, LOW);

@@ -12,6 +12,7 @@
             "includePath": [
                 "C:\\Users\\isaac\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_nano\\4.1.1\\cores\\arduino",
                 "C:\\Users\\isaac\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_nano\\4.1.1\\variants\\ARDUINO_NANO33BLE",
+                "C:\\Users\\isaac\\Documents\\Arduino\\libraries\\L293D\\src",
                 "C:\\Users\\isaac\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_nano\\4.1.1\\cores\\arduino\\api\\deprecated",
                 "C:\\Users\\isaac\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_nano\\4.1.1\\cores\\arduino\\api\\deprecated-avr-comp",
                 "c:\\users\\isaac\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include\\c++\\7.2.1",
