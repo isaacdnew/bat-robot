@@ -1,29 +1,40 @@
 #include <L293D.h>
-
-// This motor opens a door in a peek-a-boo toy.
-int waittime;
-int motorPin1 = 2; // digital pin
-int motorPin2 = 3; // digital pin
-int flapMotorEnablePin = 6; // analog pin
-//L293D flapMotor(motorPin1, motorPin2, 
+#define MOTOR_PIN_A 2 // any gpio
+#define MOTOR_PIN_B 3 // any gpio
+#define MOTOR_ENABLE_PIN 6 // any pwm pin
+#define PWM_MOTOR_FREQUENCY 200
+#define PWM_MOTOR_RESOLUTION 8
+L293D flapMotor(MOTOR_PIN_A, MOTOR_PIN_B, MOTOR_ENABLE_PIN);
+int motorSpeed = 0;
 
 void setup()
 {
-  pinMode(motorPin1, OUTPUT);
-  pinMode(motorPin2, OUTPUT);
+  flapMotor.begin(true);
 }
 
 void loop()
 {
+  // ramp up and down in speed
+  for (int i = 0; i <= 100; i++) {
+    flapMotor.SetMotorSpeed(i);
+    delay(20);
+  }
+  for (int i = 100; i >= 0; i--) {
+    flapMotor.SetMotorSpeed(i);
+    delay(20);
+  }
+  
+  /*
   // go forward
-  digitalWrite(motorPin1, HIGH);
-  digitalWrite(motorPin2, LOW);
+  digitalWrite(MOTOR_PIN_A, HIGH);
+  digitalWrite(MOTOR_PIN_B, LOW);
   digitalWrite(LED_BUILTIN, HIGH);
   delay(2500);
   
   // pause
-  digitalWrite(motorPin1, LOW);
-  digitalWrite(motorPin2, LOW);
+  digitalWrite(MOTOR_PIN_A, LOW);
+  digitalWrite(MOTOR_PIN_B, LOW);
   digitalWrite(LED_BUILTIN, LOW);
   delay(1500);
+  */
 }
